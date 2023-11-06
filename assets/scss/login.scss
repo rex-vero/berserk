@@ -1,0 +1,13 @@
+.close{
+    border: none;
+    background-color: white;
+    transition: .2s;
+    &:hover{
+        transition: .2s;
+        transform: scale(1.8);
+    }
+    .bi-x-lg{
+        font-size: 20px;
+        color: red;
+    }
+}

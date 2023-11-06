@@ -1,3 +1,15 @@
-
+.close {
+  border: none;
+  background-color: white;
+  transition: 0.2s;
+}
+.close:hover {
+  transition: 0.2s;
+  transform: scale(1.8);
+}
+.close .bi-x-lg {
+  font-size: 20px;
+  color: red;
+}
 
 /*# sourceMappingURL=login.css.map */
