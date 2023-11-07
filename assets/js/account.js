@@ -4,6 +4,7 @@ const arrow = document.getElementById('arrow');
 const arrow2 = document.getElementById('arrow2');
 const Languages = document.getElementById('Languages');
 const Languages2 = document.getElementById('Languages2');
+const acc = document.getElementById('acc');
 const sun = document.getElementById('sun');
 const moon = document.getElementById('moon');
 const home = document.getElementById('home');
@@ -13,7 +14,7 @@ const password = document.getElementById('password');
 const email2 = document.getElementById('email2');
 const password2 = document.getElementById('password2');
 const text = document.getElementById('text');
-const kir = document.getElementById('kir');
+const modalLable = document.getElementById('staticBackdropLabel');
 const btn = document.getElementById('btn');
 const text2 = document.getElementById('text-2');
 const btn2 = document.getElementById('btn-2');
@@ -41,6 +42,8 @@ english.addEventListener('click', () => {
     home.innerText = 'Home';
     Languages.innerText = 'Languages';
     Languages2.innerText = 'Languages';
+    acc.innerText='Create Your Account Now!';
+    modalLable.innerText='Create Account';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa')
@@ -50,7 +53,8 @@ persian.addEventListener('click', () => {
     home.innerText = 'خانه';
     Languages.innerText = 'زبان ها';
     Languages2.innerText = 'زبان ها';
-
+    acc.innerText='همین الان اکانت خودت را بساز!';
+    modalLable.innerText='ساختن اکانت';
 });
 sun.addEventListener('click',()=>{
     sun.style.display='none';
