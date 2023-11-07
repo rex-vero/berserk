@@ -13,8 +13,7 @@
     <title>Berserk-Account</title>
 </head>
 
-<body>
-
+<body id="font">
     <nav dir="ltr" class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <img src="../assets/images/icon.png" class="navbar-brand img-fluid brand">
@@ -37,8 +36,8 @@
                             <span id="Languages2">Languages</span><i class="bi bi-arrow-up"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li id="english" class="dropdown-item">English</li>
-                            <li id="persian" class="dropdown-item">Persian</li>
+                            <li id="english" class="text-center item">English</li>
+                            <li id="persian" class="text-center item">Persian</li>
                         </ul>
                     </li>
                 </ul>
@@ -61,13 +60,13 @@
                                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
                                         id="close" class="bi bi-x-lg"></i></button>
                             </div>
-                            <div class="modal-body p-4">
+                            <div dir="ltr" class="modal-body p-4">
                                 <form class="d-flex flex-column">
                                     <div class="d-flex flex-column">
-                                        <label for="email" class="fw-bold text-white">Your Email</label>
+                                        <label id="label-e" for="email" class="fw-bold text-white">Your Email</label>
                                         <input type="email" class="input" id="email">
                                         <p class="text-danger" id="text"></p>
-                                        <label for="password" class="fw-bold text-white">Your Password</label>
+                                        <label id="label-p" for="password" class="fw-bold text-white">Your Password</label>
                                         <input type="password" class="input" id="password">
                                         <p class="text-danger" id="text-2"></p>
                                     </div>
@@ -82,14 +81,14 @@
                     <div class="card col-lg-5 col-10">
                         <div class="card-body p-5">
                             <form class="d-flex flex-column">
-                                <label for="email">Email</label>
+                                <label id="label-1" for="email">Email</label>
                                 <input type="email" class="input" id="email2">
-                                <label for="password">Password</label>
+                                <label id="label-2" for="password">Password</label>
                                 <input type="password" class="input" id="password2">
                                 <button class="btn btn-outline-info" id="btn-2">submit</button>
-                                <a id="acc" href="#" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    Create Your Account Now!
-                                </a>
+                               <p><span id="acc2">You Don't Have Account?</span> <a id="acc" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Create Your Account Now!
+                            </a></p> 
                             </form>
                         </div>
                     </div>
