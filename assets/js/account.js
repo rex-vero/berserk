@@ -14,6 +14,7 @@ const moon = document.getElementById('moon');
 const home = document.getElementById('home');
 const html = document.getElementById('html');
 const email = document.getElementById('email');
+const dir = document.getElementById('dir');
 const password = document.getElementById('password');
 const email2 = document.getElementById('email2');
 const password2 = document.getElementById('password2');
@@ -68,6 +69,7 @@ persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
     html.setAttribute('dir', 'rtl');
     emailLabel.setAttribute('dir', 'rtl');
+    dir.setAttribute('dir', 'rtl');
     passwordLabel.setAttribute('dir', 'rtl');
     font.setAttribute('class', 'BMitraBd');
     arrow.style.display = 'block';
