@@ -1,3 +1,23 @@
+@font-face {
+  font-family: LibreBaskerville;
+  src: url("../fonts/LibreBaskerville-Bold.ttf");
+}
+@font-face {
+  font-family: Zoheir;
+  src: url("../fonts/BMitraBd.ttf");
+}
+body {
+  font-family: LibreBaskerville;
+}
+
+.BMitraBd {
+  font-family: Zoheir;
+}
+
+.LibreBaskerville {
+  font-family: LibreBaskerville;
+}
+
 .modal-content {
   background-color: black;
 }
@@ -54,7 +74,7 @@
 }
 
 .brand {
-  height: 3rem;
+  height: 3.2rem;
   filter: invert(100);
 }
 
@@ -86,8 +106,23 @@
   display: none;
 }
 
-.bi-moon-stars, .bi-sun {
+#menu {
+  display: none;
+}
+
+.bi-moon-stars,
+.bi-sun {
   cursor: pointer;
+}
+
+.item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.item:hover {
+  color: #ffffff;
+  background-color: #818181;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=login.css.map */

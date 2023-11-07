@@ -5,7 +5,9 @@ const arrow2 = document.getElementById('arrow2');
 const Languages = document.getElementById('Languages');
 const Languages2 = document.getElementById('Languages2');
 const acc = document.getElementById('acc');
+const acc2 = document.getElementById('acc2');
 const sun = document.getElementById('sun');
+const font = document.getElementById('font');
 const moon = document.getElementById('moon');
 const home = document.getElementById('home');
 const html = document.getElementById('html');
@@ -13,6 +15,10 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const email2 = document.getElementById('email2');
 const password2 = document.getElementById('password2');
+const emailLabel = document.getElementById('label-e');
+const passwordLabel = document.getElementById('label-p');
+const emailLabel2 = document.getElementById('label-1');
+const passwordLabel2 = document.getElementById('label-2');
 const text = document.getElementById('text');
 const modalLable = document.getElementById('staticBackdropLabel');
 const btn = document.getElementById('btn');
@@ -35,34 +41,55 @@ arrow2.addEventListener('click', () => {
     arrow2.style.display = 'none';
 });
 english.addEventListener('click', () => {
-    html.setAttribute('lang', 'en')
-    html.setAttribute('dir', 'ltr')
+    html.setAttribute('lang', 'en');
+    html.setAttribute('dir', 'ltr');
+    font.setAttribute('class', 'LibreBaskerville');
+    emailLabel.setAttribute('dir', 'ltr');
+    passwordLabel.setAttribute('dir', 'ltr');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'Home';
     Languages.innerText = 'Languages';
     Languages2.innerText = 'Languages';
-    acc.innerText='Create Your Account Now!';
-    modalLable.innerText='Create Account';
+    acc.innerText = 'Create Your Account Now!';
+    acc2.innerText = "You Don't Have Account?";
+    modalLable.innerText = 'Create Account';
+    persian.innerText = 'Persian';
+    english.innerText = 'English';
+    passwordLabel.innerText = 'Your Password';
+    emailLabel.innerText = 'Your Email';
+    passwordLabel2.innerText = 'Password';
+    emailLabel2.innerText = 'Email';
+
 });
 persian.addEventListener('click', () => {
-    html.setAttribute('lang', 'fa')
-    html.setAttribute('dir', 'rtl')
+    html.setAttribute('lang', 'fa');
+    html.setAttribute('dir', 'rtl');
+    emailLabel.setAttribute('dir', 'rtl');
+    passwordLabel.setAttribute('dir', 'rtl');
+    font.setAttribute('class', 'BMitraBd');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'خانه';
     Languages.innerText = 'زبان ها';
     Languages2.innerText = 'زبان ها';
-    acc.innerText='همین الان اکانت خودت را بساز!';
-    modalLable.innerText='ساختن اکانت';
+    acc.innerText = 'همین الان اکانت خودت را بساز!';
+    acc2.innerText = 'اکانت ندارید؟';
+    modalLable.innerText = 'ساختن اکانت';
+    persian.innerText = 'فارسی';
+    english.innerText = 'انگلیسی';
+    passwordLabel.innerText = 'رمزعبور شما';
+    emailLabel.innerText = 'ایمیل شما';
+    passwordLabel2.innerText = 'رمزعبور';
+    emailLabel2.innerText = 'ایمیل';
 });
-sun.addEventListener('click',()=>{
-    sun.style.display='none';
-    moon.style.display='block';
+sun.addEventListener('click', () => {
+    sun.style.display = 'none';
+    moon.style.display = 'block';
 })
-moon.addEventListener('click',()=>{
-    moon.style.display='none';
-    sun.style.display='block';
+moon.addEventListener('click', () => {
+    moon.style.display = 'none';
+    sun.style.display = 'block';
 })
 btn.addEventListener('click', (e) => {
     e.preventDefault();
