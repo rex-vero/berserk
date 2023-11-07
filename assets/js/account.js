@@ -2,8 +2,9 @@ const english = document.getElementById('english');
 const persian = document.getElementById('persian');
 const arrow = document.getElementById('arrow');
 const arrow2 = document.getElementById('arrow2');
-const Languages = document.getElementById('Languages');
-const Languages2 = document.getElementById('Languages2');
+const del = document.getElementById('del');
+const languages = document.getElementById('Languages');
+const languages2 = document.getElementById('Languages2');
 const acc = document.getElementById('acc');
 const acc2 = document.getElementById('acc2');
 const sun = document.getElementById('sun');
@@ -26,7 +27,7 @@ const text2 = document.getElementById('text-2');
 const btn2 = document.getElementById('btn-2');
 const x = document.getElementById('close');
 const users = [
-    { email: 'rexvero@gmail.com', password: '1234' }
+    { email: '1rexvero1@gmail.com', password: 'Mnmn1382' }
 ];
 let numbers = /[0-9]/g;
 let letters = /[a-z]/g;
@@ -49,8 +50,8 @@ english.addEventListener('click', () => {
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'Home';
-    Languages.innerText = 'Languages';
-    Languages2.innerText = 'Languages';
+    languages.innerText = 'Languages';
+    languages2.innerText = 'Languages';
     acc.innerText = 'Create Your Account Now!';
     acc2.innerText = "You Don't Have Account?";
     modalLable.innerText = 'Create Account';
@@ -71,8 +72,8 @@ persian.addEventListener('click', () => {
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'خانه';
-    Languages.innerText = 'زبان ها';
-    Languages2.innerText = 'زبان ها';
+    languages.innerText = 'زبان ها';
+    languages2.innerText = 'زبان ها';
     acc.innerText = 'همین الان اکانت خودت را بساز!';
     acc2.innerText = 'اکانت ندارید؟';
     modalLable.innerText = 'ساختن اکانت';
@@ -117,6 +118,7 @@ btn.addEventListener('click', (e) => {
     }
     if (email.value !== "" && email.value.match(forEmail) && password.value !== "" && password.value.match(numbers) && password.value.match(letters) && password.value.match(lettersUp) && password.value.length >= 8) {
         btn.innerText = 'Done';
+        del.style.display = 'none';
     } else {
         btn.innerText = 'Create Account';
     }
