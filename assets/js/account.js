@@ -3,6 +3,7 @@ const persian = document.getElementById('persian');
 const arrow = document.getElementById('arrow');
 const arrow2 = document.getElementById('arrow2');
 const del = document.getElementById('del');
+const show = document.getElementById('show');
 const languages = document.getElementById('Languages');
 const languages2 = document.getElementById('Languages2');
 const acc = document.getElementById('acc');
@@ -123,6 +124,17 @@ btn.addEventListener('click', (e) => {
         btn.innerText = 'Create Account';
     }
 });
+show.addEventListener('click', () => {
+    if (password.type === 'password') {
+        password.type = 'text';
+        show.classList.add('bi-eye-slash');
+        show.classList.remove('bi-eye');
+    } else{
+        password.type = 'password';
+        show.classList.remove('bi-eye-slash');
+        show.classList.add('bi-eye');
+    }
+})
 x.addEventListener('click', () => {
     email.value = "";
     password.value = "";

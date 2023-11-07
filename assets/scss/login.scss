@@ -134,3 +134,10 @@ body {
         transition: .3s;
     }
 }
+.eye{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 1.6rem;
+    right: 2rem;
+    z-index: 3;
+}
