@@ -1,3 +1,13 @@
+const english = document.getElementById('english');
+const persian = document.getElementById('persian');
+const arrow = document.getElementById('arrow');
+const arrow2 = document.getElementById('arrow2');
+const Languages = document.getElementById('Languages');
+const Languages2 = document.getElementById('Languages2');
+const sun = document.getElementById('sun');
+const moon = document.getElementById('moon');
+const home = document.getElementById('home');
+const html = document.getElementById('html');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const email2 = document.getElementById('email2');
@@ -15,6 +25,41 @@ let numbers = /[0-9]/g;
 let letters = /[a-z]/g;
 let lettersUp = /[A-Z]/g;
 let forEmail = /[@]/g;
+arrow.addEventListener('click', () => {
+    arrow.style.display = 'none';
+    arrow2.style.display = 'block';
+});
+arrow2.addEventListener('click', () => {
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
+});
+english.addEventListener('click', () => {
+    html.setAttribute('lang', 'en')
+    html.setAttribute('dir', 'ltr')
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
+    home.innerText = 'Home';
+    Languages.innerText = 'Languages';
+    Languages2.innerText = 'Languages';
+});
+persian.addEventListener('click', () => {
+    html.setAttribute('lang', 'fa')
+    html.setAttribute('dir', 'rtl')
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
+    home.innerText = 'خانه';
+    Languages.innerText = 'زبان ها';
+    Languages2.innerText = 'زبان ها';
+
+});
+sun.addEventListener('click',()=>{
+    sun.style.display='none';
+    moon.style.display='block';
+})
+moon.addEventListener('click',()=>{
+    moon.style.display='none';
+    sun.style.display='block';
+})
 btn.addEventListener('click', (e) => {
     e.preventDefault();
     if (email.value === "") {
@@ -54,7 +99,7 @@ btn2.addEventListener('click', (e) => {
     e.preventDefault();
     users.filter(item => {
         if (email2.value !== item.email && password2.value !== item.password) {
-        } else{
+        } else {
             window.location.replace("../index.html");
         }
     });
