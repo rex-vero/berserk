@@ -11,14 +11,20 @@
 body {
     font-family: LibreBaskerville;
 }
-.guts-2{
+
+.bg {
+    background-color: #00000091;
+}
+
+.guts-2 {
     background-image: url('../images/guts.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     height: 100vh;
 }
-.guts{
+
+.guts {
     background-image: url('../images/guts3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,7 +41,7 @@ body {
 }
 
 .modal-content {
-    background-color: black;
+    background-color: #000000;
 
     .close {
         border: none;
@@ -99,6 +105,11 @@ body {
     filter: invert(100);
 }
 
+.dropdown-menu {
+    background-color: #ffffff59;
+    z-index: 3;
+}
+
 .list {
     border: none;
     background-color: #00000000;
@@ -141,6 +152,7 @@ body {
 .item {
     cursor: pointer;
     transition: .3s;
+    color: #000;
 
     &:hover {
         color: #ffffff;
@@ -148,10 +160,16 @@ body {
         transition: .3s;
     }
 }
-.eye{
+
+.eye {
     cursor: pointer;
     position: absolute;
     margin-top: 1.6rem;
     right: 2rem;
     z-index: 3;
+}
+
+.card {
+    background-color: #000000bb;
+    border-radius: 14px;
 }

@@ -10,6 +10,10 @@ body {
   font-family: LibreBaskerville;
 }
 
+.bg {
+  background-color: rgba(0, 0, 0, 0.568627451);
+}
+
 .guts-2 {
   background-image: url("../images/guts.jpg");
   background-repeat: no-repeat;
@@ -35,7 +39,7 @@ body {
 }
 
 .modal-content {
-  background-color: black;
+  background-color: #000000;
 }
 .modal-content .close {
   border: none;
@@ -94,6 +98,11 @@ body {
   filter: invert(100);
 }
 
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.3490196078);
+  z-index: 3;
+}
+
 .list {
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -134,6 +143,7 @@ body {
 .item {
   cursor: pointer;
   transition: 0.3s;
+  color: #000;
 }
 .item:hover {
   color: #ffffff;
@@ -147,6 +157,11 @@ body {
   margin-top: 1.6rem;
   right: 2rem;
   z-index: 3;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7333333333);
+  border-radius: 14px;
 }
 
 /*# sourceMappingURL=login.css.map */
