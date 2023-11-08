@@ -46,9 +46,11 @@ arrow2.addEventListener('click', () => {
 english.addEventListener('click', () => {
     html.setAttribute('lang', 'en');
     html.setAttribute('dir', 'ltr');
-    font.setAttribute('class', 'LibreBaskerville');
+    font.classList.add('LibreBaskerville');
+    font.classList.remove('BMitraBd');
     emailLabel.setAttribute('dir', 'ltr');
     passwordLabel.setAttribute('dir', 'ltr');
+    dir.setAttribute('dir', 'ltr');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'Home';
@@ -71,7 +73,8 @@ persian.addEventListener('click', () => {
     emailLabel.setAttribute('dir', 'rtl');
     dir.setAttribute('dir', 'rtl');
     passwordLabel.setAttribute('dir', 'rtl');
-    font.setAttribute('class', 'BMitraBd');
+    font.classList.add('BMitraBd');
+    font.classList.remove('LibreBaskerville');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'خانه';
@@ -90,10 +93,14 @@ persian.addEventListener('click', () => {
 sun.addEventListener('click', () => {
     sun.style.display = 'none';
     moon.style.display = 'block';
+    font.classList.add('guts');
+    font.classList.remove('guts-2');
 })
 moon.addEventListener('click', () => {
     moon.style.display = 'none';
     sun.style.display = 'block';
+    font.classList.add('guts-2');
+    font.classList.remove('guts');
 })
 btn.addEventListener('click', (e) => {
     e.preventDefault();

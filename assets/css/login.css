@@ -10,6 +10,22 @@ body {
   font-family: LibreBaskerville;
 }
 
+.guts-2 {
+  background-image: url("../images/guts.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.guts {
+  background-image: url("../images/guts3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
 .BMitraBd {
   font-family: Zoheir;
 }
