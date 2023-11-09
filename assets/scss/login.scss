@@ -25,7 +25,7 @@ body {
 }
 
 .guts {
-    background-image: url('../images/guts3.jpg');
+    background-image: url('../images/guts2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -50,7 +50,7 @@ body {
 
         &:hover {
             transition: .2s;
-            transform: scale(1.4) rotate(360deg);
+            transform: scale(1.8);
         }
 
         .bi-x-lg {
@@ -76,6 +76,48 @@ body {
     }
 }
 
+.btn-2 {
+    border: 1px solid #bd0d00;
+    color: #bd0d00;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    transition: .4s;
+    padding: 5px;
+
+    &:hover {
+        transition: .4s;
+        transform: scale(1.2);
+        color: #ffffff;
+        background-color: #bd0d00;
+    }
+}
+
+.btn-3 {
+    border: 1px solid #a0a0a0;
+    color: #a0a0a0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    transition: .4s;
+    padding: 5px;
+
+    &:hover {
+        transition: .4s;
+        transform: scale(1.2);
+        color: #000000;
+        background-color: #a0a0a0;
+    }
+}
+
+.nav-link {
+    color: #bd0d00;
+    transition: .4s;
+
+    &:hover {
+        transition: .4s;
+        color: #790800;
+    }
+}
+
 .input {
     border: 1px solid black;
     outline: none;
@@ -86,6 +128,10 @@ body {
         transition: .2s;
         transform: scale(1.01);
     }
+}
+
+#del {
+    display: none;
 }
 
 .wrong {
@@ -102,7 +148,11 @@ body {
 
 .brand {
     height: 3.2rem;
-    filter: invert(100);
+    filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
+}
+.brand2 {
+    height: 3.2rem;
+    filter: invert(100%);
 }
 
 .dropdown-menu {
@@ -149,6 +199,26 @@ body {
     cursor: pointer;
 }
 
+.hover {
+    color: #ffffff;
+    transition: .4s;
+
+    &:hover {
+        transition: .4s;
+        color: #a0a0a0;
+    }
+}
+
+.hover2 {
+    color: #bd0d00;
+    transition: .4s;
+
+    &:hover {
+        transition: .4s;
+        color: #790800;
+    }
+}
+
 .item {
     cursor: pointer;
     transition: .3s;
@@ -167,9 +237,39 @@ body {
     margin-top: 1.6rem;
     right: 2rem;
     z-index: 3;
+    color: #000000;
+}
+
+.eye-2 {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 1.6rem;
+    right: 3.5rem;
+    z-index: 3;
+    color: #000000;
 }
 
 .card {
     background-color: #000000bb;
     border-radius: 14px;
+}
+
+.acc {
+    color: #bd0d00;
+    transition: .4s;
+
+    &:hover {
+        transition: .4s;
+        color: #790800;
+    }
+}
+
+.acc2 {
+    color: #a0a0a0;
+    transition: .4s;
+
+    &:hover {
+        transition: .4s;
+        color: #7a7a7a;
+    }
 }
