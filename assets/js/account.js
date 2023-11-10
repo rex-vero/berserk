@@ -3,13 +3,16 @@ const persian = document.getElementById('persian');
 const arrow = document.getElementById('arrow');
 const arrow2 = document.getElementById('arrow2');
 const del = document.getElementById('del');
+const list = document.getElementById('list');
 const show = document.getElementById('show');
+const drop = document.getElementById('drop');
 const brand = document.getElementById('brand');
 const show2 = document.getElementById('show2');
 const languages = document.getElementById('Languages');
 const languages2 = document.getElementById('Languages2');
 const error = document.getElementById('error');
 const error2 = document.getElementById('error2');
+const error3 = document.getElementById('error3');
 const acc = document.getElementById('acc');
 const acc2 = document.getElementById('acc2');
 const sun = document.getElementById('sun');
@@ -97,6 +100,14 @@ persian.addEventListener('click', () => {
     btn2.innerText = 'ورود';
 });
 sun.addEventListener('click', () => {
+    english.classList.add('item2');
+    english.classList.remove('item');
+    persian.classList.add('item2');
+    persian.classList.remove('item');
+    list.classList.add('color2');
+    list.classList.remove('color');
+    drop.classList.add('menu2');
+    drop.classList.remove('menu');
     sun.style.display = 'none';
     moon.style.display = 'block';
     moon.classList.add('hover');
@@ -114,6 +125,14 @@ sun.addEventListener('click', () => {
     brand.classList.remove("brand");
 });
 moon.addEventListener('click', () => {
+    english.classList.add('item');
+    english.classList.remove('item2');
+    persian.classList.add('item');
+    persian.classList.remove('item2');
+    list.classList.add('color');
+    list.classList.remove('color2');
+    drop.classList.add('menu');
+    drop.classList.remove('menu2');
     moon.style.display = 'none';
     sun.style.display = 'block';
     moon.classList.add('hover2');
@@ -132,34 +151,41 @@ moon.addEventListener('click', () => {
 });
 btn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (email.value === "") {
-        text.innerText = "Enter The Correct Email Format.";
-        email.classList.add('wrong');
-        email.classList.remove('good');
-    } else if (email.value !== "" && email.value.match(forEmail)) {
-        text.innerText = "";
-        email.classList.remove('wrong');
-        email.classList.add('good');
-    } else {
-        text.innerText = "You Forgot '@' For Your Email Address.";
-        email.classList.add('wrong');
-        email.classList.remove('good');
-    }
-    if (password.value !== "" && password.value.match(numbers) && password.value.match(letters) && password.value.match(lettersUp) && password.value.length >= 8) {
-        text2.innerText = ''
-        password.classList.add('good');
-        password.classList.remove('wrong');
-    } else {
-        text2.innerText = 'Your Password Must Contain A Number, An Uppecace, Lowercase Letter And At Least 8 Characters!'
-        password.classList.remove('good');
-        password.classList.add('wrong');
-    }
-    if (email.value !== "" && email.value.match(forEmail) && password.value !== "" && password.value.match(numbers) && password.value.match(letters) && password.value.match(lettersUp) && password.value.length >= 8) {
-        btn.innerText = 'Done';
-        del.style.display = 'none';
-    } else {
-        btn.innerText = 'Create Account';
-    }
+    users.filter(item => {
+        if (email.value === "") {
+            text.innerText = "Enter The Correct Email Format.";
+            email.classList.add('wrong');
+            email.classList.remove('good');
+        } else if (email.value !== "" && email.value.match(forEmail)) {
+            text.innerText = "";
+            email.classList.remove('wrong');
+            email.classList.add('good');
+        } else {
+            text.innerText = "You Forgot '@' For Your Email Address.";
+            email.classList.add('wrong');
+            email.classList.remove('good');
+        }
+        if (password.value !== "" && password.value.match(numbers) && password.value.match(letters) && password.value.match(lettersUp) && password.value.length >= 8) {
+            text2.innerText = ''
+            password.classList.add('good');
+            password.classList.remove('wrong');
+        } else {
+            text2.innerText = 'Your Password Must Contain A Number, An Uppecace, Lowercase Letter And At Least 8 Characters!'
+            password.classList.remove('good');
+            password.classList.add('wrong');
+        }
+        if (email.value === item.email && password.value === item.password) {
+            btn.innerText = 'Create Account';
+            password.classList.remove('good');
+            password.classList.add('wrong');
+            email.classList.add('wrong');
+            email.classList.remove('good');
+            text2.innerText = 'This Account Has Been Registered!';
+        } else if (email.value !== "" && email.value.match(forEmail) && password.value !== "" && password.value.match(numbers) && password.value.match(letters) && password.value.match(lettersUp) && password.value.length >= 8) {
+            btn.innerText = 'Done';
+            del.style.display = 'none';
+        }
+    });
 });
 show.addEventListener('click', () => {
     if (password.type === 'password') {
@@ -215,6 +241,7 @@ btn2.addEventListener('click', (e) => {
         if (email2.value !== item.email || password2.value !== item.password) {
             email2.classList.add('wrong');
             password2.classList.add('wrong');
+            error3.innerText = 'Forgot Your Password?';
             del.style.display = 'block';
         } else if (email2.value === item.email && password2.value === item.password) {
             window.location.href = "../index.html";

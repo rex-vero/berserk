@@ -146,17 +146,30 @@ body {
   filter: invert(100%);
 }
 
-.dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.3490196078);
+.menu {
+  background-color: rgba(207, 0, 0, 0.1921568627);
   z-index: 3;
 }
 
-.list {
+.menu2 {
+  background-color: rgba(0, 0, 0, 0.6352941176);
+  z-index: 3;
+}
+
+.color2 {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 25px;
   display: none;
   color: #ffffff;
+}
+
+.color {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  display: none;
+  color: #ff0000;
 }
 
 .dropdown-item {
@@ -206,13 +219,28 @@ body {
   color: #790800;
 }
 
+.font {
+  font-size: 0.8rem;
+}
+
 .item {
   cursor: pointer;
   transition: 0.3s;
-  color: #000;
+  color: #000000;
 }
 .item:hover {
+  color: #bd0d00;
+  background-color: #110404;
+  transition: 0.3s;
+}
+
+.item2 {
+  cursor: pointer;
+  transition: 0.3s;
   color: #ffffff;
+}
+.item2:hover {
+  color: #000000;
   background-color: #818181;
   transition: 0.3s;
 }

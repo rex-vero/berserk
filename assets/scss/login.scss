@@ -150,22 +150,36 @@ body {
     height: 3.2rem;
     filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
 }
+
 .brand2 {
     height: 3.2rem;
     filter: invert(100%);
 }
 
-.dropdown-menu {
-    background-color: #ffffff59;
+.menu {
+    background-color: #cf000031;
     z-index: 3;
 }
 
-.list {
+.menu2 {
+    background-color: #000000a2;
+    z-index: 3;
+}
+
+.color2 {
     border: none;
     background-color: #00000000;
     font-size: 25px;
     display: none;
     color: #ffffff;
+}
+
+.color {
+    border: none;
+    background-color: #00000000;
+    font-size: 25px;
+    display: none;
+    color: #ff0000;
 }
 
 .dropdown-item {
@@ -219,13 +233,29 @@ body {
     }
 }
 
+.font {
+    font-size: 0.8rem;
+}
+
 .item {
     cursor: pointer;
     transition: .3s;
-    color: #000;
+    color: #000000;
 
     &:hover {
-        color: #ffffff;
+        color: #bd0d00;
+        background-color: #110404;
+        transition: .3s;
+    }
+}
+
+.item2 {
+    cursor: pointer;
+    transition: .3s;
+    color: #ffffff;
+
+    &:hover {
+        color: #000000;
         background-color: #818181;
         transition: .3s;
     }
