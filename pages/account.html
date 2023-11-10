@@ -17,8 +17,9 @@
     <nav dir="ltr" class="navbar navbar-expand-lg bg">
         <div class="container-fluid">
             <img id="brand" src="../assets/images/icon.png" class="navbar-brand img-fluid brand">
-            <button class="list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="list color" id="list" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,7 +36,7 @@
                             aria-expanded="false">
                             <span id="Languages2">Languages</span><i class="bi bi-arrow-up"></i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul id="drop" class="dropdown-menu menu">
                             <li id="english" class="text-center item">English</li>
                             <li id="persian" class="text-center item">Persian</li>
                         </ul>
@@ -94,7 +95,8 @@
                                 </div>
                                 <input type="password" dir="ltr" class="input" id="password2">
                                 <p dir="ltr" id="error2" class="text-danger"></p>
-                                <button class="btn-2 w-75 align-self-center" id="btn-2">Login</button>
+                                <a href="#" dir="ltr" id="error3" class="text-danger font"></a>
+                                <button class="btn-2 w-75 align-self-center mt-3" id="btn-2">Login</button>
                                 <p class="mt-3 text-center" id="del"><span class="text-white" id="acc2">You Don't Have
                                         Account?</span> <a id="acc" class="acc" href="#" data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop">
