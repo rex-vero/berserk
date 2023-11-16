@@ -13,6 +13,7 @@ const drop = document.getElementById('drop');
 const guts = document.getElementById('guts');
 const guts2 = document.getElementById('guts2');
 const hog = document.getElementById('hog');
+const title = document.getElementById('title');
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';
@@ -36,6 +37,7 @@ english.addEventListener('click', () => {
     guts.innerText = 'Black Sowrdsman';
     guts2.innerText = 'A Man Who Worse Than A Monster.';
     hog.innerText = 'In This World Is The Destiny Of Mankind Controlled By Some Trascendental Entity Or Law? Is It Like Hand Of God Hovering Above? At Least It Is True That Man Has No Control; Even Over His Own Will...';
+    title.innerText='Berserk';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -51,7 +53,8 @@ persian.addEventListener('click', () => {
     english.innerText = 'انگلیسی';
     guts.innerText = 'شمشیرزن سیاهپوش';
     guts2.innerText = 'یک انسان که از هیولا بدتر است.';
-    hog.innerText='در این جهان آیا سرنوشت انسان توسط نیرو یا موجوداتی ماورایی کنترل میشود؟ آیا چیزی شبیه دست خدا درمیان است؟ حداقل این درست است که انسان هیچ کنترلی بر خود ندارد; حتی برروی سرنوشت خود...'
+    hog.innerText='در این جهان آیا سرنوشت انسان توسط نیرو یا موجوداتی ماورایی کنترل میشود؟ آیا چیزی شبیه دست خدا درمیان است؟ حداقل این درست است که انسان هیچ کنترلی بر خود ندارد; حتی برروی سرنوشت خود...';
+    title.innerText='برزرک';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
