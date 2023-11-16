@@ -35,6 +35,7 @@ const btn = document.getElementById('btn');
 const text2 = document.getElementById('text-2');
 const btn2 = document.getElementById('btn-2');
 const x = document.getElementById('close');
+const title = document.getElementById('title');
 const users = [
     { email: '1rexvero1@gmail.com', password: 'Mnmn1382' }
 ];
@@ -73,7 +74,7 @@ english.addEventListener('click', () => {
     passwordLabel2.innerText = 'Password';
     emailLabel2.innerText = 'Email';
     btn2.innerText = 'Login';
-
+    title.innerText = 'Berserk-Account';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -98,6 +99,7 @@ persian.addEventListener('click', () => {
     passwordLabel2.innerText = 'رمزعبور';
     emailLabel2.innerText = 'ایمیل';
     btn2.innerText = 'ورود';
+    title.innerText = 'برزرک-حساب کاربری';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
