@@ -30,21 +30,25 @@ body {
 .brand {
   height: 3.2rem;
   filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
+  transition: 0.4s;
 }
 
 .brand2 {
   height: 3.2rem;
   filter: invert(100%);
+  transition: 0.4s;
 }
 
 .menu {
   background-color: rgba(207, 0, 0, 0.1921568627);
   z-index: 3;
+  transition: 0.4s;
 }
 
 .menu2 {
   background-color: rgba(0, 0, 0, 0.6352941176);
   z-index: 3;
+  transition: 0.4s;
 }
 
 .color2 {
@@ -65,6 +69,7 @@ body {
 
 .dropdown-item {
   cursor: pointer;
+  transition: 0.4s;
 }
 
 @media only screen and (max-width: 990px) {
@@ -87,6 +92,7 @@ body {
 .bi-moon-stars,
 .bi-sun {
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .hover {
@@ -105,6 +111,16 @@ body {
 .hover2:hover {
   transition: 0.4s;
   color: #790800;
+}
+
+.red {
+  color: #bd0d00;
+  transition: 0.4s;
+}
+
+.white {
+  color: #ffffff;
+  transition: 0.4s;
 }
 
 .font {
@@ -135,6 +151,25 @@ body {
 
 .bg {
   background-color: rgba(0, 0, 0, 0.568627451);
+}
+
+.background {
+  background-color: #1b0201;
+  transition: 0.3s;
+}
+
+.background2 {
+  background-color: #161616;
+  transition: 0.3s;
+}
+
+.hog {
+  border-radius: 10px;
+  box-shadow: 0 0 9px #000000;
+}
+
+#hog {
+  text-shadow: 0 0 10px #000000;
 }
 
 /*# sourceMappingURL=index.css.map */

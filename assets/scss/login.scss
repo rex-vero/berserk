@@ -149,21 +149,25 @@ body {
 .brand {
     height: 3.2rem;
     filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
+    transition: .4s;
 }
 
 .brand2 {
     height: 3.2rem;
     filter: invert(100%);
+    transition: .4s;
 }
 
 .menu {
     background-color: #cf000031;
     z-index: 3;
+    transition: .4s;
 }
 
 .menu2 {
     background-color: #000000a2;
     z-index: 3;
+    transition: .4s;
 }
 
 .color2 {
@@ -184,6 +188,7 @@ body {
 
 .dropdown-item {
     cursor: pointer;
+    transition: .4s;
 }
 
 @media only screen and (max-width:990px) {
@@ -211,6 +216,7 @@ body {
 .bi-moon-stars,
 .bi-sun {
     cursor: pointer;
+    transition: .4s;
 }
 
 .hover {
