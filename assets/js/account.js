@@ -36,6 +36,7 @@ const text2 = document.getElementById('text-2');
 const btn2 = document.getElementById('btn-2');
 const x = document.getElementById('close');
 const title = document.getElementById('title');
+const berserker = 'Struggler';
 const users = [
     { email: '1rexvero1@gmail.com', password: 'Mnmn1382' }
 ];
@@ -247,6 +248,7 @@ btn2.addEventListener('click', (e) => {
             del.style.display = 'block';
         } else if (email2.value === item.email && password2.value === item.password) {
             window.location.href = "../index.html";
+            localStorage.setItem('berserker', JSON.stringify(berserker));
         }
     });
 

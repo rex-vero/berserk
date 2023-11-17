@@ -14,6 +14,7 @@ const guts = document.getElementById('guts');
 const guts2 = document.getElementById('guts2');
 const hog = document.getElementById('hog');
 const title = document.getElementById('title');
+const user = JSON.parse(localStorage.getItem('berserker'));
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';
@@ -110,3 +111,8 @@ moon.addEventListener('click', () => {
     hog.classList.remove("white");
     hog.classList.add("red");
 });
+if (user) {
+    console.log('ok');
+} else {
+    console.log('no');
+}
