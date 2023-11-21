@@ -12,8 +12,14 @@ const list = document.getElementById('list');
 const drop = document.getElementById('drop');
 const guts = document.getElementById('guts');
 const guts2 = document.getElementById('guts2');
+const guts3 = document.getElementById('guts3');
 const hog = document.getElementById('hog');
 const title = document.getElementById('title');
+const card = document.getElementById('card');
+const card2 = document.getElementById('card2');
+const card3 = document.getElementById('card3');
+const griffith = document.getElementById('griffith');
+const casca = document.getElementById('casca');
 const user = JSON.parse(localStorage.getItem('berserker'));
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
@@ -38,7 +44,10 @@ english.addEventListener('click', () => {
     guts.innerText = 'Black Sowrdsman';
     guts2.innerText = 'A Man Who Worse Than A Monster.';
     hog.innerText = 'In This World Is The Destiny Of Mankind Controlled By Some Trascendental Entity Or Law? Is It Like Hand Of God Hovering Above? At Least It Is True That Man Has No Control; Even Over His Own Will...';
-    title.innerText='Berserk';
+    title.innerText = 'Berserk';
+    guts3.innerText = 'Guts';
+    griffith.innerText = 'Griffith';
+    casca.innerText = 'Casca';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -54,8 +63,11 @@ persian.addEventListener('click', () => {
     english.innerText = 'انگلیسی';
     guts.innerText = 'شمشیرزن سیاهپوش';
     guts2.innerText = 'یک انسان که از هیولا بدتر است.';
-    hog.innerText='در این جهان آیا سرنوشت انسان توسط نیرو یا موجوداتی ماورایی کنترل میشود؟ آیا چیزی شبیه دست خدا درمیان است؟ حداقل این درست است که انسان هیچ کنترلی بر خود ندارد; حتی برروی سرنوشت خود...';
-    title.innerText='برزرک';
+    hog.innerText = 'در این جهان آیا سرنوشت انسان توسط نیرو یا موجوداتی ماورایی کنترل میشود؟ آیا چیزی شبیه دست خدا درمیان است؟ حداقل این درست است که انسان هیچ کنترلی بر خود ندارد; حتی برروی سرنوشت خود...';
+    title.innerText = 'برزرک';
+    guts3.innerText = 'گاتس';
+    griffith.innerText = 'گریفیث';
+    casca.innerText = 'کاسکا';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -83,6 +95,12 @@ sun.addEventListener('click', () => {
     guts2.classList.add("white");
     hog.classList.add("white");
     hog.classList.remove("red");
+    card.classList.add("white");
+    card.classList.remove("red");
+    card2.classList.add("white");
+    card2.classList.remove("red");
+    card3.classList.add("white");
+    card3.classList.remove("red");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -110,6 +128,12 @@ moon.addEventListener('click', () => {
     guts2.classList.remove("white");
     hog.classList.remove("white");
     hog.classList.add("red");
+    card.classList.remove("white");
+    card.classList.add("red");
+    card2.classList.remove("white");
+    card2.classList.add("red");
+    card3.classList.remove("white");
+    card3.classList.add("red");
 });
 if (user) {
     console.log('ok');
