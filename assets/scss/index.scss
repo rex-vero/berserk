@@ -199,3 +199,12 @@ body {
 .img {
     height: 16rem;
 }
+
+.hover3 {
+    transition: .3s;
+
+    &:hover {
+        transition: .3s;
+        transform: scale(1.04);
+    }
+}

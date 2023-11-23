@@ -191,4 +191,12 @@ body {
   height: 16rem;
 }
 
+.hover3 {
+  transition: 0.3s;
+}
+.hover3:hover {
+  transition: 0.3s;
+  transform: scale(1.04);
+}
+
 /*# sourceMappingURL=index.css.map */
