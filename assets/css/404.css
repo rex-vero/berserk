@@ -1,0 +1,10 @@
+@font-face {
+  font-family: LibreBaskerville;
+  src: url("../fonts/LibreBaskerville-Bold.ttf");
+}
+.bg {
+  background-color: rgba(0, 0, 0, 0.568627451);
+  font-family: LibreBaskerville;
+}
+
+/*# sourceMappingURL=404.css.map */
