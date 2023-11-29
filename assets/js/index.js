@@ -25,6 +25,16 @@ const who2 = document.getElementById('who2');
 const who3 = document.getElementById('who3');
 const manga = document.getElementById('manga');
 const title2 = document.getElementById('title2');
+const footer = document.getElementById('footer');
+const tel = document.getElementById('tel');
+const insta = document.getElementById('insta');
+const git = document.getElementById('git');
+const email = document.getElementById('email');
+const rip = document.getElementById('rip');
+const berserk = document.getElementById('berserk');
+const about = document.getElementById('about');
+const owner = document.getElementById('owner');
+const me = document.getElementById('me');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", link: 'https://www.amazon.com/Berserk-Vol-1-Kentaro-Miura/dp/1593070209', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: 'https://www.amazon.com/Berserk-Vol-13-Kentaro-Miura/dp/1593075006', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: 'https://www.amazon.com/Berserk-Vol-18-Kentaro-Miura/dp/1593077432/ref=d_pd_sbs_sccl_2_10/135-4750351-1027145?pd_rd_w=pqmxq&content-id=amzn1.sym.3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=CW80B4NF42BRZGJGQ939&pd_rd_wg=8sq1i&pd_rd_r=64f51b5e-626f-46e6-ba4c-da76a1011ce0&pd_rd_i=1593077432&psc=1', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: 'https://www.amazon.com/Berserk-Vol-23-Kentaro-Miura/dp/1593078641', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: 'https://www.amazon.com/Berserk-Vol-28-Kentaro-Miura/dp/1595822097/ref=d_pd_sbs_sccl_2_6/135-4750351-1027145?pd_rd_w=pqmxq&content-id=amzn1.sym.3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=CW80B4NF42BRZGJGQ939&pd_rd_wg=8sq1i&pd_rd_r=64f51b5e-626f-46e6-ba4c-da76a1011ce0&pd_rd_i=1595822097&psc=1', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: 'https://www.amazon.com/Berserk-Vol-32-Kentaro-Miura/dp/1595823670/ref=d_pd_sbs_sccl_2_6/135-4750351-1027145?pd_rd_w=6ryEg&content-id=amzn1.sym.3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=MAMF3EJ64FSRFP4P7XS5&pd_rd_wg=0DYCm&pd_rd_r=24a47dff-b2dd-4bee-9303-550e42245b6a&pd_rd_i=1595823670&psc=1', src: "assets/images/vol.32.jpg" }
@@ -59,6 +69,12 @@ english.addEventListener('click', () => {
     who.innerText = 'Guts, renowned as the "Black Swordsman" is a former mercenary and branded wanderer who travels the world in a constant internal struggle between pursuing his own ends and upholding his attachments to those dear to him.';
     who2.innerText = 'Griffith is the current leader of the reborn Band of the Falcon and supreme commander of the Midland Regular Army. Having been at the fore of many battles, he has amassed a reputation as a savior across the continent, and is revered as the "Falcon of Light".';
     who3.innerText = "Casca is a former unit commander of the Band of the Falcon and an estranged companion of Guts. Following Guts departure and Griffith's subsequent imprisonment, she is forced to assume the position of the band's leader.";
+    footer.classList.remove('text-lg-end');
+    footer.classList.add('text-lg-start');
+    about.innerText = 'About Me';
+    owner.innerText = "Website Owner: Mohamad Amin Ahmadi";
+    me.innerText = "Contact With Me";
+    rip.innerText = 'RIP Kentaro Miura';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -82,6 +98,12 @@ persian.addEventListener('click', () => {
     who.innerText = 'گاتس، معروف به "شمشیرزن سیاه" مزدور سابق و سرگردانی است که در یک کشمکش درونی دائمی بین دنبال کردن اهداف خود و حفظ وابستگی هایش به کسانی که برایش عزیز هستند، به جهان سفر می کند.';
     who2.innerText = 'گریفیث رهبر فعلی گروه دوباره متولد شده فالکون و فرمانده عالی ارتش منظم میدلند است. او که در نبردهای زیادی پیشتاز بود، به عنوان یک ناجی در سراسر قاره شهرت پیدا کرد و به عنوان "شاهین نور" مورد احترام است.';
     who3.innerText = 'کاسکا یکی از فرماندهان سابق گروه فالکون و یکی از همراهان جدا شده گاتس است. پس از خروج گاتس و زندانی شدن گریفیث، او مجبور می‌شود تا مقام رهبری گروه را به عهده بگیرد.';
+    footer.classList.add('text-lg-end');
+    footer.classList.remove('text-lg-start');
+    about.innerText = 'درباره من';
+    owner.innerText = "مدیر وبسایت: محمدامین احمدی";
+    me.innerText = "ارتباط با من";
+    rip.innerText = 'مرحوم کنتارو میورا';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -115,6 +137,20 @@ sun.addEventListener('click', () => {
     card2.classList.remove("red");
     card3.classList.add("white");
     card3.classList.remove("red");
+    footer.classList.add("white");
+    footer.classList.remove("red");
+    tel.classList.add("white");
+    tel.classList.remove("red");
+    insta.classList.add("white");
+    insta.classList.remove("red");
+    git.classList.add("white");
+    git.classList.remove("red");
+    email.classList.add("white");
+    email.classList.remove("red");
+    rip.classList.add("white");
+    rip.classList.remove("red");
+    berserk.classList.add("berserk2");
+    berserk.classList.remove("berserk");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -148,6 +184,20 @@ moon.addEventListener('click', () => {
     card2.classList.add("red");
     card3.classList.remove("white");
     card3.classList.add("red");
+    footer.classList.remove("white");
+    footer.classList.add("red");
+    tel.classList.remove("white");
+    tel.classList.add("red");
+    insta.classList.remove("white");
+    insta.classList.add("red");
+    git.classList.remove("white");
+    git.classList.add("red");
+    email.classList.remove("white");
+    email.classList.add("red");
+    rip.classList.remove("white");
+    rip.classList.add("red");
+    berserk.classList.remove("berserk2");
+    berserk.classList.add("berserk");
 });
 mangas.map(item => {
     const cards = document.createElement('div');
@@ -159,9 +209,9 @@ mangas.map(item => {
     if (user) {
         cards.innerHTML = `
     <a href="${item.link}"
-    class="text-decoration-none" target="_blank">
+    class="text-decoration-none white" target="_blank">
     <img src="${item.src}" class="img-fluid card-img-top">
-    <div class="card-body">
+    <div class="card-body text-center">
             <h4 class="card-title">${item.title}</h4>
     </div>
     <div class="card-footer">
@@ -172,9 +222,9 @@ mangas.map(item => {
     } else {
         cards.innerHTML = `
     <a href="./pages/account.html"
-    class="text-decoration-none">
+    class="text-decoration-none white">
     <img src="${item.src}" class="img-fluid card-img-top">
-    <div class="card-body">
+    <div class="card-body text-center">
             <h4 class="card-title">${item.title}</h4>
     </div>
     <div class="card-footer">

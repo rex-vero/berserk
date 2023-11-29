@@ -199,4 +199,44 @@ body {
   transform: scale(1.04);
 }
 
+.berserk {
+  filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
+}
+
+.berserk2 {
+  filter: invert(100%);
+}
+
+.bi-telegram {
+  transition: 0.3s;
+}
+.bi-telegram:hover {
+  transition: 0.3s;
+  color: #0084ff;
+}
+
+.bi-instagram {
+  transition: 0.3s;
+}
+.bi-instagram:hover {
+  transition: 0.3s;
+  color: #6200ff;
+}
+
+.bi-github {
+  transition: 0.3s;
+}
+.bi-github:hover {
+  transition: 0.3s;
+  color: #9b00af;
+}
+
+.bi-envelope-at {
+  transition: 0.3s;
+}
+.bi-envelope-at:hover {
+  transition: 0.3s;
+  color: #949494;
+}
+
 /*# sourceMappingURL=index.css.map */
