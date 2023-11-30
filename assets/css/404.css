@@ -3,8 +3,16 @@
   src: url("../fonts/LibreBaskerville-Bold.ttf");
 }
 .bg {
-  background-color: rgba(0, 0, 0, 0.568627451);
+  background-color: #1b0201;
   font-family: LibreBaskerville;
+}
+
+.error {
+  font-size: 20rem;
+}
+
+.red {
+  color: #bd0d00;
 }
 
 /*# sourceMappingURL=404.css.map */
