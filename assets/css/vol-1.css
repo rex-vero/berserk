@@ -1,0 +1,164 @@
+@font-face {
+  font-family: LibreBaskerville;
+  src: url("../fonts/LibreBaskerville-Bold.ttf");
+}
+@font-face {
+  font-family: Zoheir;
+  src: url("../fonts/BMitraBd.ttf");
+}
+body {
+  font-family: LibreBaskerville;
+}
+
+.BMitraBd {
+  font-family: Zoheir;
+}
+
+.LibreBaskerville {
+  font-family: LibreBaskerville;
+}
+
+.nav-link {
+  color: #bd0d00;
+  transition: 0.4s;
+}
+.nav-link:hover {
+  transition: 0.4s;
+  color: #790800;
+}
+
+.brand {
+  height: 3.2rem;
+  filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
+}
+
+.brand2 {
+  height: 3.2rem;
+  filter: invert(100%);
+}
+
+.menu {
+  background-color: rgba(207, 0, 0, 0.1921568627);
+  z-index: 3;
+  transition: 0.4s;
+}
+
+.menu2 {
+  background-color: rgba(0, 0, 0, 0.6352941176);
+  z-index: 3;
+  transition: 0.4s;
+}
+
+.color2 {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  display: none;
+  color: #ffffff;
+}
+
+.color {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  display: none;
+  color: #ff0000;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 990px) {
+  .list {
+    display: block;
+  }
+}
+#arrow2 {
+  display: none;
+}
+
+#moon {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+.bi-moon-stars,
+.bi-sun {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.hover {
+  color: #ffffff;
+  transition: 0.4s;
+}
+.hover:hover {
+  transition: 0.4s;
+  color: #a0a0a0;
+}
+
+.hover2 {
+  color: #bd0d00;
+  transition: 0.4s;
+}
+.hover2:hover {
+  transition: 0.4s;
+  color: #790800;
+}
+
+.red {
+  color: #bd0d00;
+  transition: 0.4s;
+}
+
+.white {
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.font {
+  font-size: 0.8rem;
+}
+
+.item {
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000000;
+}
+.item:hover {
+  color: #bd0d00;
+  background-color: #110404;
+  transition: 0.3s;
+}
+
+.item2 {
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff;
+}
+.item2:hover {
+  color: #000000;
+  background-color: #818181;
+  transition: 0.3s;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.568627451);
+}
+
+.background {
+  background-color: #1b0201;
+  transition: 0.3s;
+}
+
+.background2 {
+  background-color: #161616;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=vol-1.css.map */
