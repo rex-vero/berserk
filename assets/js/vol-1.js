@@ -31,7 +31,7 @@ english.addEventListener('click', () => {
     font.classList.remove('BMitraBd');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
-    home.innerText = 'Account';
+    home.innerText = 'Home';
     languages.innerText = 'Languages';
     languages2.innerText = 'Languages';
     persian.innerText = 'Persian';
@@ -44,7 +44,7 @@ persian.addEventListener('click', () => {
     font.classList.remove('LibreBaskerville');
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
-    home.innerText = 'حساب کاربری';
+    home.innerText = 'خانه';
     languages.innerText = 'زبان ها';
     languages2.innerText = 'زبان ها';
     persian.innerText = 'فارسی';
