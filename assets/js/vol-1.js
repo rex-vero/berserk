@@ -12,6 +12,10 @@ const list = document.getElementById('list');
 const drop = document.getElementById('drop');
 const english = document.getElementById('english');
 const persian = document.getElementById('persian');
+const manga = document.getElementById('manga');
+const mangas = [
+    { title: 'Berserk Vol.1', prise: "14.99", src: "../assets/images/vol. 1.jpg" }
+];
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';
@@ -87,4 +91,16 @@ moon.addEventListener('click', () => {
     home.classList.remove('hover');
     brand.classList.add("brand");
     brand.classList.remove("brand2");
+});
+mangas.map(item => {
+    const cards = document.createElement('div');
+    cards.classList.add('row');
+    cards.classList.add('mt-4');
+    cards.innerHTML = `
+        <div dir="ltr" class="d-flex flex-lg-row flex-column">
+        <img src="${item.src}" class=" img-fluid hog col-xs-8 align-self-sm-center">
+        <p dir="auto" class="fs-5 align-self-center ms-4 mt-2 red">${item.prise}</p>
+        <p dir="auto" class="fs-5 align-self-center ms-4 mt-2 red">${item.title}</p>
+    </div>`;
+    manga.appendChild(cards);
 });
