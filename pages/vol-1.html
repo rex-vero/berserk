@@ -50,23 +50,59 @@
             </div>
         </div>
     </nav>
-    <div id="manga" class="container-fluid">
+    <div dir="ltr" class="d-flex flex-lg-row flex-column">
+        <div id="manga" class="container-fluid">
+        </div>
+        <div class="container-fluid align-self-center">
+            <div class="row">
+                <div class="d-flex flex-column justify-content-center">
+                    <div dir="ltr" class="d-flex justify-content-center">
+                        <button id="add" class="btn-2 w-25 mt-3 mx-5 align-self-center">Add</button>
+                        <button id="remove" class="btn-3 d-none w-25 mt-3 mx-5 align-self-center">Remove</button>
+                    </div>
+                    <div dir="ltr" class="d-flex justify-content-center">
+                        <h5 id="num" class="align-self-center mt-3 white">Number:&nbsp;</h5>
+                        <h5 id="product" class="align-self-center mt-3 white">0</h5>
+                    </div>
+                    <div dir="ltr" class="d-flex justify-content-center">
+                        <h6 id="tot" class="align-self-center mt-3 white">Total: $</h6>
+                        <h6 id="total" class="align-self-center mt-3 white">0</h6>
+                    </div>
+                    <a id="cart" class="fs-3 mt-2 cart rounded-circle px-1 d-none align-self-center" href="#">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="d-flex flex-column justify-content-center">
-                <div dir="ltr" class="d-flex justify-content-center">
-                    <button id="add" class="btn-2 w-25 mt-3 mx-5 align-self-center">Add</button>
-                    <button id="remove" class="btn-3 d-none w-25 mt-3 mx-5 align-self-center">Remove</button>
+    <div class="container-fluid bg">
+        <div class="row mt-5">
+            <div class="d-flex justify-content-between flex-lg-row flex-column">
+                <div id="footer"
+                    class="d-flex flex-column text-lg-start text-center align-self-center mt-lg-0 mt-3 red">
+                    <h2 id="about">About Me</h2>
+                    <p id="owner">Website Owner: Mohamad Amin Ahmadi</p>
+                    <div class="d-flex flex-column">
+                        <h4 id="me">Contact With Me</h4>
+                        <div class="d-flex justify-content-between">
+                            <a href="https://t.me/rex_vero"><i id="tel" class="bi fs-2 red bi-telegram"></i></a>
+                            <a href="https://instagram.com/rex_vero"><i id="insta"
+                                    class="bi red fs-2  bi-instagram"></i></a>
+                            <a href="https://github.com/rex-vero"><i id="git" class="bi fs-2 red bi-github"></i></a>
+                            <a href="mailto:1rexvero1@gmail.com"><i id="email"
+                                    class="bi fs-2 red bi-envelope-at"></i></a>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <img src="../assets/images/Kentaro_Miura.png" class="col-3 img-fluid rounded-circle">
+                        <div class="mt-1">
+                            <a id="rip" class="red" href="https://en.wikipedia.org/wiki/Kentaro_Miura">RIP Kentaro
+                                Miura</a>
+                        </div>
+                    </div>
                 </div>
-                <div dir="ltr" class="d-flex justify-content-center">
-                    <h5 id="num" class="align-self-center mt-3 white">Number:&nbsp;</h5>
-                    <h5 id="product" class="align-self-center mt-3 white">0</h5>
-                </div>
-                <div dir="ltr" class="d-flex justify-content-center">
-                    <h6 id="tot" class="align-self-center mt-3 white">Total: $</h6>
-                    <h6 id="total" class="align-self-center mt-3 white">0</h6>
-
+                <div class="align-self-center">
+                    <img id="berserk" src="../assets/images/icon.png" class="img-fluid berserk">
                 </div>
             </div>
         </div>
