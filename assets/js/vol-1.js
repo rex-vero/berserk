@@ -17,6 +17,9 @@ const add = document.getElementById('add');
 const remove = document.getElementById('remove');
 const product = document.getElementById('product');
 const total = document.getElementById('total');
+const num = document.getElementById('num');
+const tot = document.getElementById('tot');
+const title = document.getElementById('title');
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", src: "../assets/images/vol. 1.jpg" }
 ];
@@ -40,6 +43,9 @@ english.addEventListener('click', () => {
     languages2.innerText = 'Languages';
     persian.innerText = 'Persian';
     english.innerText = 'English';
+    num.innerText = 'Number:';
+    tot.innerText = 'Total: $';
+    title.innerText = 'Berserk-Vol.1';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -53,6 +59,9 @@ persian.addEventListener('click', () => {
     languages2.innerText = 'زبان ها';
     persian.innerText = 'فارسی';
     english.innerText = 'انگلیسی';
+    num.innerText = 'تعداد:';
+    tot.innerText = 'مجموع: $';
+    title.innerText = 'برزرک-جلد.1';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -112,8 +121,8 @@ add.addEventListener('click', () => {
     product.innerText++;
     remove.classList.remove('d-none');
     remove.classList.add('d-block');
-    total.map(item => {
-        total.innerText = item.price * product.innerText;
+    mangas.map(item => {
+        total.innerText = (item.prise * product.innerText).toFixed(2);
     })
 });
 
@@ -122,7 +131,12 @@ remove.addEventListener('click', () => {
         remove.classList.add('d-none');
         remove.classList.remove('d-block');
         product.innerText = 0;
+        total.innerText = 0;
+
     } else {
         product.innerText--;
+        mangas.map(item => {
+            total.innerText = (item.prise * product.innerText).toFixed(2);
+        })
     }
 });
