@@ -13,6 +13,10 @@ const drop = document.getElementById('drop');
 const english = document.getElementById('english');
 const persian = document.getElementById('persian');
 const manga = document.getElementById('manga');
+const add = document.getElementById('add');
+const remove = document.getElementById('remove');
+const product = document.getElementById('product');
+const total = document.getElementById('total');
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", src: "../assets/images/vol. 1.jpg" }
 ];
@@ -97,10 +101,28 @@ mangas.map(item => {
     cards.classList.add('row');
     cards.classList.add('mt-4');
     cards.innerHTML = `
-        <div dir="ltr" class="d-flex flex-lg-row flex-column">
-        <img src="${item.src}" class=" img-fluid hog col-xs-8 align-self-sm-center">
-        <p dir="auto" class="fs-5 align-self-center ms-4 mt-2 red">${item.prise}</p>
-        <p dir="auto" class="fs-5 align-self-center ms-4 mt-2 red">${item.title}</p>
+        <div dir="ltr" class="d-flex flex-column">
+        <img src="${item.src}" class=" img-fluid col-8 col-sm-3 align-self-center">
+        <h1 dir="auto" class="align-self-center mt-2 white">${item.title}</h1>
+        <h2 dir="auto" class="align-self-center mt-2 white">$${item.prise}</h2>
     </div>`;
     manga.appendChild(cards);
+});
+add.addEventListener('click', () => {
+    product.innerText++;
+    remove.classList.remove('d-none');
+    remove.classList.add('d-block');
+    total.map(item => {
+        total.innerText = item.price * product.innerText;
+    })
+});
+
+remove.addEventListener('click', () => {
+    if (+product.innerText === 1) {
+        remove.classList.add('d-none');
+        remove.classList.remove('d-block');
+        product.innerText = 0;
+    } else {
+        product.innerText--;
+    }
 });

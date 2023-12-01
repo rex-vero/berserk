@@ -166,3 +166,33 @@ body {
     background-color: #161616;
     transition: .3s;
 }
+.btn-2 {
+    border: 1px solid #00bd1f;
+    color: #00bd1f;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    transition: .4s;
+    padding: 5px;
+
+    &:hover {
+        transition: .4s;
+        transform: scale(1.2);
+        color: #ffffff;
+        background-color: #00bd1f;
+    }
+}
+.btn-3 {
+    border: 1px solid #bd0d00;
+    color: #bd0d00;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    transition: .4s;
+    padding: 5px;
+
+    &:hover {
+        transition: .4s;
+        transform: scale(1.2);
+        color: #ffffff;
+        background-color: #bd0d00;
+    }
+}
