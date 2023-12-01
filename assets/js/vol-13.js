@@ -32,7 +32,7 @@ const about = document.getElementById('about');
 const owner = document.getElementById('owner');
 const me = document.getElementById('me');
 const mangas = [
-    { title: 'Berserk Vol.1', prise: "14.99", src: "../assets/images/vol. 1.jpg" }
+    { title: 'Berserk Vol.13', prise: "11.50", src: "../assets/images/vol.13.jpg" }
 ];
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
@@ -56,7 +56,7 @@ english.addEventListener('click', () => {
     english.innerText = 'English';
     num.innerText = 'Number:';
     tot.innerText = 'Total: $';
-    title.innerText = 'Berserk-Vol.1';
+    title.innerText = 'Berserk-Vol.13';
     footer.classList.remove('text-lg-end');
     footer.classList.add('text-lg-start');
     about.innerText = 'About Me';
@@ -80,7 +80,7 @@ persian.addEventListener('click', () => {
     english.innerText = 'انگلیسی';
     num.innerText = 'تعداد:';
     tot.innerText = 'مجموع: $';
-    title.innerText = 'برزرک-جلد.1';
+    title.innerText = 'برزرک-جلد.13';
     footer.classList.add('text-lg-end');
     footer.classList.remove('text-lg-start');
     about.innerText = 'درباره من';
