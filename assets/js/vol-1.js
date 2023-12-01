@@ -19,7 +19,18 @@ const product = document.getElementById('product');
 const total = document.getElementById('total');
 const num = document.getElementById('num');
 const tot = document.getElementById('tot');
+const cart = document.getElementById('cart');
 const title = document.getElementById('title');
+const footer = document.getElementById('footer');
+const tel = document.getElementById('tel');
+const insta = document.getElementById('insta');
+const git = document.getElementById('git');
+const email = document.getElementById('email');
+const rip = document.getElementById('rip');
+const berserk = document.getElementById('berserk');
+const about = document.getElementById('about');
+const owner = document.getElementById('owner');
+const me = document.getElementById('me');
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", src: "../assets/images/vol. 1.jpg" }
 ];
@@ -46,6 +57,14 @@ english.addEventListener('click', () => {
     num.innerText = 'Number:';
     tot.innerText = 'Total: $';
     title.innerText = 'Berserk-Vol.1';
+    footer.classList.remove('text-lg-end');
+    footer.classList.add('text-lg-start');
+    about.innerText = 'About Me';
+    owner.innerText = "Website Owner: Mohamad Amin Ahmadi";
+    me.innerText = "Contact With Me";
+    rip.innerText = 'RIP Kentaro Miura';
+    add.innerText = 'Add';
+    remove.innerText = 'Remove';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -62,6 +81,14 @@ persian.addEventListener('click', () => {
     num.innerText = 'تعداد:';
     tot.innerText = 'مجموع: $';
     title.innerText = 'برزرک-جلد.1';
+    footer.classList.add('text-lg-end');
+    footer.classList.remove('text-lg-start');
+    about.innerText = 'درباره من';
+    owner.innerText = "مدیر وبسایت: محمدامین احمدی";
+    me.innerText = "ارتباط با من";
+    rip.innerText = 'مرحوم کنتارو میورا';
+    add.innerText = 'اضافه کردن';
+    remove.innerText = 'حذف';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -83,6 +110,22 @@ sun.addEventListener('click', () => {
     arrow2.classList.add('hover');
     brand.classList.add("brand2");
     brand.classList.remove("brand");
+    footer.classList.add("white");
+    footer.classList.remove("red");
+    tel.classList.add("white");
+    tel.classList.remove("red");
+    insta.classList.add("white");
+    insta.classList.remove("red");
+    git.classList.add("white");
+    git.classList.remove("red");
+    email.classList.add("white");
+    email.classList.remove("red");
+    rip.classList.add("white");
+    rip.classList.remove("red");
+    berserk.classList.add("berserk2");
+    berserk.classList.remove("berserk");
+    cart.classList.add("cart2");
+    cart.classList.remove("cart");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -104,6 +147,22 @@ moon.addEventListener('click', () => {
     home.classList.remove('hover');
     brand.classList.add("brand");
     brand.classList.remove("brand2");
+    footer.classList.remove("white");
+    footer.classList.add("red");
+    tel.classList.remove("white");
+    tel.classList.add("red");
+    insta.classList.remove("white");
+    insta.classList.add("red");
+    git.classList.remove("white");
+    git.classList.add("red");
+    email.classList.remove("white");
+    email.classList.add("red");
+    rip.classList.remove("white");
+    rip.classList.add("red");
+    berserk.classList.remove("berserk2");
+    berserk.classList.add("berserk");
+    cart.classList.remove("cart2");
+    cart.classList.add("cart");
 });
 mangas.map(item => {
     const cards = document.createElement('div');
@@ -121,6 +180,8 @@ add.addEventListener('click', () => {
     product.innerText++;
     remove.classList.remove('d-none');
     remove.classList.add('d-block');
+    cart.classList.remove('d-none');
+    cart.classList.add('d-block');
     mangas.map(item => {
         total.innerText = (item.prise * product.innerText).toFixed(2);
     })
@@ -130,6 +191,8 @@ remove.addEventListener('click', () => {
     if (+product.innerText === 1) {
         remove.classList.add('d-none');
         remove.classList.remove('d-block');
+        cart.classList.add('d-none');
+        cart.classList.remove('d-block');
         product.innerText = 0;
         total.innerText = 0;
 
