@@ -38,6 +38,8 @@ const about = document.getElementById('about');
 const owner = document.getElementById('owner');
 const me = document.getElementById('me');
 const toast = document.getElementById('toast');
+const welcome = document.getElementById('welcome');
+const brand2 = document.getElementById('brand2');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
@@ -78,6 +80,7 @@ english.addEventListener('click', () => {
     owner.innerText = "Website Owner: Mohamad Amin Ahmadi";
     me.innerText = "Contact With Me";
     rip.innerText = 'RIP Kentaro Miura';
+    welcome.innerText = 'Welcome, Struggler...';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -107,6 +110,7 @@ persian.addEventListener('click', () => {
     owner.innerText = "مدیر وبسایت: محمدامین احمدی";
     me.innerText = "ارتباط با من";
     rip.innerText = 'مرحوم کنتارو میورا';
+    welcome.innerText = 'خوش اومدی, تقلاکننده...';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -154,6 +158,10 @@ sun.addEventListener('click', () => {
     rip.classList.remove("red");
     berserk.classList.add("berserk2");
     berserk.classList.remove("berserk");
+    welcome.classList.add("white");
+    welcome.classList.remove("red");
+    brand2.classList.add("brand2");
+    brand2.classList.remove("brand");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -201,6 +209,10 @@ moon.addEventListener('click', () => {
     rip.classList.add("red");
     berserk.classList.remove("berserk2");
     berserk.classList.add("berserk");
+    welcome.classList.remove("white");
+    welcome.classList.add("red");
+    brand2.classList.add("brand");
+    brand2.classList.remove("brand2");
 });
 mangas.map(item => {
     const cards = document.createElement('div');
@@ -212,7 +224,7 @@ mangas.map(item => {
     if (user) {
         toast.classList.add('d-block');
         setTimeout(() => {
-          toast.classList.remove('d-block');
+            toast.classList.remove('d-block');
         }, 3000);
         cards.innerHTML = `
     <a href="${item.link}"
