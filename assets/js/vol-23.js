@@ -203,3 +203,11 @@ remove.addEventListener('click', () => {
         })
     }
 });
+cart.addEventListener('click', () => {
+    remove.classList.add('d-none');
+    remove.classList.remove('d-block');
+    cart.classList.add('d-none');
+    cart.classList.remove('d-block');
+    product.innerText = 0;
+    total.innerText = 0;
+});
