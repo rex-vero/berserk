@@ -231,9 +231,12 @@ btn2.addEventListener('click', (e) => {
     users.filter(item => {
         if (email2.value !== item.email) {
             error.innerText = 'Your Email Is Incorrect.';
+            email2.classList.remove('good');
+            email2.classList.add('wrong');
         } else if (email2.value === item.email) {
             error.innerText = '';
             email2.classList.add('good');
+            email2.classList.remove('wrong');
         }
         if (password2.value !== item.email) {
             error2.innerText = 'Your Password Is Incorrect.';
