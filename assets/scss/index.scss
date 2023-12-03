@@ -212,6 +212,7 @@ body {
 .berserk {
     filter: invert(18%) sepia(90%) saturate(5603%) hue-rotate(356deg) brightness(98%) contrast(115%);
 }
+
 .berserk2 {
     filter: invert(100%);
 }
@@ -250,4 +251,13 @@ body {
         transition: .3s;
         color: #949494;
     }
+}
+
+.position {
+    position: absolute;
+    z-index: 4;
+}
+
+.toast {
+    background-color: #000000d2;
 }

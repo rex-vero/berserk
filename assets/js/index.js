@@ -37,6 +37,7 @@ const berserk = document.getElementById('berserk');
 const about = document.getElementById('about');
 const owner = document.getElementById('owner');
 const me = document.getElementById('me');
+const toast = document.getElementById('toast');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
@@ -209,6 +210,10 @@ mangas.map(item => {
     cards.classList.add('my-4');
     cards.classList.add('hover3');
     if (user) {
+        toast.classList.add('d-block');
+        setTimeout(() => {
+          toast.classList.remove('d-block');
+        }, 3000);
         cards.innerHTML = `
     <a href="${item.link}"
     class="text-decoration-none white">

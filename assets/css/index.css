@@ -239,4 +239,13 @@ body {
   color: #949494;
 }
 
+.position {
+  position: absolute;
+  z-index: 4;
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.8235294118);
+}
+
 /*# sourceMappingURL=index.css.map */
