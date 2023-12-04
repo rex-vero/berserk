@@ -40,10 +40,24 @@ const me = document.getElementById('me');
 const toast = document.getElementById('toast');
 const welcome = document.getElementById('welcome');
 const brand2 = document.getElementById('brand2');
+const logout = document.getElementById('logout');
+const menu = document.getElementById('menu3');
+const cross = document.getElementById('cross');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
 ];
+menu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    cross.classList.remove('d-none');
+});
+cross.addEventListener('click', () => {
+    menu.style.display = 'block';
+    cross.classList.add('d-none');
+});
+logout.addEventListener('click', () => {
+    localStorage.clear();
+});
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';
@@ -60,6 +74,7 @@ english.addEventListener('click', () => {
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'Account';
+    logout.innerText = 'Logout';
     languages.innerText = 'Languages';
     languages2.innerText = 'Languages';
     persian.innerText = 'Persian';
@@ -90,6 +105,7 @@ persian.addEventListener('click', () => {
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'حساب کاربری';
+    logout.innerText = 'خروج از حساب';
     languages.innerText = 'زبان ها';
     languages2.innerText = 'زبان ها';
     persian.innerText = 'فارسی';
@@ -128,6 +144,7 @@ sun.addEventListener('click', () => {
     moon.classList.add('hover');
     moon.classList.remove('hover2');
     home.classList.add('hover');
+    logout.classList.add('hover');
     arrow.classList.add('hover');
     arrow2.classList.add('hover');
     brand.classList.add("brand2");
@@ -181,6 +198,7 @@ moon.addEventListener('click', () => {
     arrow.classList.remove('hover');
     arrow2.classList.remove('hover');
     home.classList.remove('hover');
+    logout.classList.remove('hover');
     brand.classList.add("brand");
     brand.classList.remove("brand2");
     guts.classList.add("red");
@@ -222,6 +240,8 @@ mangas.map(item => {
     cards.classList.add('my-4');
     cards.classList.add('hover3');
     if (user) {
+        home.classList.add('d-none');
+        logout.classList.remove('d-none');
         toast.classList.add('d-block');
         setTimeout(() => {
             toast.classList.remove('d-block');
@@ -239,6 +259,8 @@ mangas.map(item => {
     </a>`;
         manga.appendChild(cards);
     } else {
+        home.classList.remove('d-none');
+        logout.classList.add('d-none');
         cards.innerHTML = `
     <a href="./pages/account.html"
     class="text-decoration-none white">

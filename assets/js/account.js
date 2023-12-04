@@ -36,6 +36,8 @@ const text2 = document.getElementById('text-2');
 const btn2 = document.getElementById('btn-2');
 const x = document.getElementById('close');
 const title = document.getElementById('title');
+const menu = document.getElementById('menu3');
+const cross = document.getElementById('cross');
 const berserker = 'Struggler';
 const users = [
     { email: '1rexvero1@gmail.com', password: 'Mnmn1382' }
@@ -44,6 +46,14 @@ let numbers = /[0-9]/g;
 let letters = /[a-z]/g;
 let lettersUp = /[A-Z]/g;
 let forEmail = /[@]/g;
+menu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    cross.classList.remove('d-none');
+});
+cross.addEventListener('click', () => {
+    menu.style.display = 'block';
+    cross.classList.add('d-none');
+});
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';

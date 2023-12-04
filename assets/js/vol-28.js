@@ -31,9 +31,19 @@ const berserk = document.getElementById('berserk');
 const about = document.getElementById('about');
 const owner = document.getElementById('owner');
 const me = document.getElementById('me');
+const menu = document.getElementById('menu3');
+const cross = document.getElementById('cross');
 const mangas = [
     { title: 'Berserk Vol.28', prise: "10.71", src: "../assets/images/vol.28.jpg" }
 ];
+menu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    cross.classList.remove('d-none');
+});
+cross.addEventListener('click', () => {
+    menu.style.display = 'block';
+    cross.classList.add('d-none');
+});
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
     arrow2.style.display = 'block';
