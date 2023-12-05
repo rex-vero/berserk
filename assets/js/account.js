@@ -136,6 +136,8 @@ sun.addEventListener('click', () => {
     acc.classList.remove('acc');
     brand.classList.add("brand2");
     brand.classList.remove("brand");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -161,6 +163,8 @@ moon.addEventListener('click', () => {
     acc.classList.remove('acc2');
     brand.classList.add("brand");
     brand.classList.remove("brand2");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 btn.addEventListener('click', (e) => {
     e.preventDefault();

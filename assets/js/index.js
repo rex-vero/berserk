@@ -199,6 +199,8 @@ sun.addEventListener('click', () => {
     out.classList.remove("red");
     modalImg.classList.add("brand2");
     modalImg.classList.remove("brand");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -257,6 +259,8 @@ moon.addEventListener('click', () => {
     out.classList.add("red");
     modalImg.classList.add("brand");
     modalImg.classList.remove("brand2");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 mangas.map(item => {
     const cards = document.createElement('div');

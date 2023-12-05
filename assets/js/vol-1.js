@@ -136,6 +136,8 @@ sun.addEventListener('click', () => {
     berserk.classList.remove("berserk");
     cart.classList.add("cart2");
     cart.classList.remove("cart");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -173,6 +175,8 @@ moon.addEventListener('click', () => {
     berserk.classList.add("berserk");
     cart.classList.remove("cart2");
     cart.classList.add("cart");
+    arrow.style.display = 'block';
+    arrow2.style.display = 'none';
 });
 mangas.map(item => {
     const cards = document.createElement('div');
