@@ -81,7 +81,8 @@
                         <a id="home" class="nav-link" aria-current="page" href="./pages/account.html">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a id="logout" class="nav-link d-none" aria-current="page" href="./pages/account.html">Logout</a>
+                        <a id="logout" class="nav-link d-none" aria-current="page" href="#" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Log Out</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" id="arrow" href="#" role="button" data-bs-toggle="dropdown"
@@ -198,6 +199,24 @@
                 </div>
                 <div class="align-self-center">
                     <img id="berserk" src="./assets/images/icon.png" class="img-fluid berserk">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title red fs-5" id="staticBackdropLabel">Berserk</h1>
+                    <img id="modal-img" src="./assets/images/icon.png" class="img-fluid brand">
+                </div>
+                <div dir="ltr" class="modal-body p-4">
+                    <p id="out" class="text-center red">Are You Sure About Logging Out?</p>
+                    <div class="d-flex justify-content-around">
+                        <button id="go" class="btn-2 w-25 mt-3">Yes</button>
+                        <button id="stay" class="btn-3 w-25 mt-3" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    </div>
                 </div>
             </div>
         </div>
