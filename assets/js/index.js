@@ -43,6 +43,11 @@ const brand2 = document.getElementById('brand2');
 const logout = document.getElementById('logout');
 const menu = document.getElementById('menu3');
 const cross = document.getElementById('cross');
+const go = document.getElementById('go');
+const stay = document.getElementById('stay');
+const out = document.getElementById('out');
+const modalImg = document.getElementById('modal-img');
+const modalLabel = document.getElementById('staticBackdropLabel');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
     { title: 'Berserk Vol.1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
@@ -55,8 +60,9 @@ cross.addEventListener('click', () => {
     menu.style.display = 'block';
     cross.classList.add('d-none');
 });
-logout.addEventListener('click', () => {
+go.addEventListener('click', () => {
     localStorage.clear();
+    window.location.href = "./pages/account.html";
 });
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
@@ -74,7 +80,7 @@ english.addEventListener('click', () => {
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
     home.innerText = 'Account';
-    logout.innerText = 'Logout';
+    logout.innerText = 'Log Out';
     languages.innerText = 'Languages';
     languages2.innerText = 'Languages';
     persian.innerText = 'Persian';
@@ -96,6 +102,10 @@ english.addEventListener('click', () => {
     me.innerText = "Contact With Me";
     rip.innerText = 'RIP Kentaro Miura';
     welcome.innerText = 'Welcome, Struggler...';
+    modalLabel.innerText = 'Berserk';
+    go.innerText = 'Yes';
+    stay.innerText = 'No';
+    out.innerText = 'Are You Sure About Logging Out?';
 });
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
@@ -127,6 +137,10 @@ persian.addEventListener('click', () => {
     me.innerText = "ارتباط با من";
     rip.innerText = 'مرحوم کنتارو میورا';
     welcome.innerText = 'خوش اومدی, تقلاکننده...';
+    modalLabel.innerText = 'برزرک';
+    go.innerText = 'بله';
+    stay.innerText = 'خیر';
+    out.innerText = 'آیا میخواهید از حساب کاربری خارج شوید؟';
 });
 sun.addEventListener('click', () => {
     english.classList.add('item2');
@@ -179,6 +193,12 @@ sun.addEventListener('click', () => {
     welcome.classList.remove("red");
     brand2.classList.add("brand2");
     brand2.classList.remove("brand");
+    modalLabel.classList.add("white");
+    modalLabel.classList.remove("red");
+    out.classList.add("white");
+    out.classList.remove("red");
+    modalImg.classList.add("brand2");
+    modalImg.classList.remove("brand");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -231,6 +251,12 @@ moon.addEventListener('click', () => {
     welcome.classList.add("red");
     brand2.classList.add("brand");
     brand2.classList.remove("brand2");
+    modalLabel.classList.remove("white");
+    modalLabel.classList.add("red");
+    out.classList.remove("white");
+    out.classList.add("red");
+    modalImg.classList.add("brand");
+    modalImg.classList.remove("brand2");
 });
 mangas.map(item => {
     const cards = document.createElement('div');
