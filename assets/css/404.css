@@ -3,7 +3,7 @@
   src: url("../fonts/LibreBaskerville-Bold.ttf");
 }
 .bg {
-  background-color: #1b0201;
+  background: linear-gradient(#3a0402, rgb(20, 20, 20));
   font-family: LibreBaskerville;
 }
 

@@ -148,16 +148,16 @@ body {
 }
 
 .bg {
-  background-color: rgba(0, 0, 0, 0.568627451);
+  background-color: rgba(0, 0, 0, 0.8705882353);
 }
 
 .background {
-  background-color: #1b0201;
+  background: linear-gradient(#3a0402, rgb(20, 20, 20));
   transition: 0.3s;
 }
 
 .background2 {
-  background-color: #161616;
+  background: linear-gradient(#161616, rgb(34, 34, 34));
   transition: 0.3s;
 }
 

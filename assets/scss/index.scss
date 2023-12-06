@@ -156,12 +156,13 @@ body {
     }
 }
 
-.bg {
-    background-color: #00000091;
+.background {
+    background: linear-gradient(#3a0402, rgb(20, 20, 20));
+    transition: .3s;
 }
 
-.background {
-    background-color: #1b0201;
+.background2 {
+    background: linear-gradient(#161616, rgb(34, 34, 34));
     transition: .3s;
 }
 
@@ -176,7 +177,7 @@ body {
 }
 
 #hog {
-    text-shadow: 0 0 10px #000000;
+    text-shadow: 5px 5px 20px #000000;
 }
 
 ::-webkit-scrollbar {
@@ -261,9 +262,11 @@ body {
 .toast {
     background-color: #000000d2;
 }
-.modal-content{
+
+.modal-content {
     background-color: #000000;
 }
+
 .btn-2 {
     border: 1px solid #00bd1f;
     color: #00bd1f;
@@ -294,4 +297,7 @@ body {
         color: #ffffff;
         background-color: #bd0d00;
     }
+}
+.bg{
+    background-color: #000000de;
 }

@@ -264,9 +264,8 @@ btn2.addEventListener('click', (e) => {
             error3.innerText = 'Forgot Your Password?';
             del.style.display = 'block';
         } else if (email2.value === item.email && password2.value === item.password) {
-            window.location.href = "../index.html";
+            window.location.replace('../index.html');
             localStorage.setItem('berserker', JSON.stringify(berserker));
         }
     });
-
 });
