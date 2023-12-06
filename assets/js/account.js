@@ -254,7 +254,7 @@ btn2.addEventListener('click', (e) => {
         }
         if (password2.value !== item.email) {
             error2.innerText = 'Your Password Is Incorrect.';
-        } else if (password2.value === item.email) {
+        } else if (password2.value === item.password) {
             error2.innerText = '';
             password2.classList.add('good');
         }
