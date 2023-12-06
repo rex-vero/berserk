@@ -62,7 +62,7 @@ cross.addEventListener('click', () => {
 });
 go.addEventListener('click', () => {
     localStorage.clear();
-    window.location.href = "./pages/account.html";
+    window.location.replace("./pages/account.html");
 });
 arrow.addEventListener('click', () => {
     arrow.style.display = 'none';
