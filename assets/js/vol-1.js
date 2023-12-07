@@ -184,7 +184,7 @@ mangas.map(item => {
     cards.classList.add('mt-4');
     cards.innerHTML = `
         <div dir="ltr" class="d-flex flex-column">
-        <img src="${item.src}" class=" img-fluid col-8 col-sm-3 align-self-center">
+        <img src="${item.src}" class=" img-fluid col-6 align-self-center">
         <h1 dir="auto" class="align-self-center mt-2 white">${item.title}</h1>
         <h2 dir="auto" class="align-self-center mt-2 white">$${item.prise}</h2>
     </div>`;
