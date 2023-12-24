@@ -48,9 +48,13 @@ const stay = document.getElementById('stay');
 const out = document.getElementById('out');
 const modalImg = document.getElementById('modal-img');
 const modalLabel = document.getElementById('staticBackdropLabel');
+const border = document.getElementById('border');
+const search = document.getElementById('search');
+const btn = document.getElementById('btn');
+const bar = document.getElementById('bar');
 const user = JSON.parse(localStorage.getItem('berserker'));
 const mangas = [
-    { title: 'Berserk Vol.1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol.13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol.18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol.23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol.28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol.32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
+    { title: 'Berserk Vol 1', prise: "14.99", link: './pages/vol-1.html', src: "assets/images/vol. 1.jpg" }, { title: "Berserk Vol 13", prise: '11.50', link: './pages/vol-13.html', src: "assets/images/vol.13.jpg" }, { title: "Berserk Vol 18", prise: '12.95', link: './pages/vol-18.html', src: "assets/images/vol.18.jpg" }, { title: "Berserk Vol 23", prise: '14.99', link: './pages/vol-23.html', src: "assets/images/vol.23.jpg" }, { title: "Berserk Vol 28", prise: '10.71', link: './pages/vol-28.html', src: "assets/images/vol.28.jpg" }, { title: "Berserk Vol 32", prise: '7.24', link: './pages/vol-32.html', src: "assets/images/vol.32.jpg" }
 ];
 menu.addEventListener('click', () => {
     menu.style.display = 'none';
@@ -75,6 +79,7 @@ arrow2.addEventListener('click', () => {
 english.addEventListener('click', () => {
     html.setAttribute('lang', 'en');
     html.setAttribute('dir', 'ltr');
+    search.setAttribute('dir', 'ltr');
     font.classList.add('LibreBaskerville');
     font.classList.remove('BMitraBd');
     arrow.style.display = 'block';
@@ -110,6 +115,7 @@ english.addEventListener('click', () => {
 persian.addEventListener('click', () => {
     html.setAttribute('lang', 'fa');
     html.setAttribute('dir', 'rtl');
+    search.setAttribute('dir', 'rtl');
     font.classList.add('BMitraBd');
     font.classList.remove('LibreBaskerville');
     arrow.style.display = 'block';
@@ -201,6 +207,12 @@ sun.addEventListener('click', () => {
     modalImg.classList.remove("brand");
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
+    border.classList.add("search-div2");
+    border.classList.remove("search-div");
+    btn.classList.add("search2");
+    btn.classList.remove("search");
+    search.classList.add("search-input2");
+    search.classList.remove("search-input");
 });
 moon.addEventListener('click', () => {
     english.classList.add('item');
@@ -261,6 +273,38 @@ moon.addEventListener('click', () => {
     modalImg.classList.remove("brand2");
     arrow.style.display = 'block';
     arrow2.style.display = 'none';
+    border.classList.add("search-div");
+    border.classList.remove("search-div2");
+    btn.classList.add("search");
+    btn.classList.remove("search2");
+    search.classList.add("search-input");
+    search.classList.remove("search-input2");
+});
+
+mangas.map(item => {
+    const cards = document.createElement('div');
+    cards.setAttribute('id', 'hi')
+    cards.classList.add('d-flex');
+    cards.classList.add('bg');
+    cards.innerHTML = `<a class="d-flex text-decoration-none" href="${item.link}">
+        <img src="${item.src}" class="img-fluid col-2">
+        <p class="align-self-center text-white ms-1">${item.title}</p>
+        </a>`;
+    bar.appendChild(cards);
+    search.addEventListener('input', () => {
+        filter = search.value.toLowerCase();
+        for (let i = 0; i < item.title.length; i++) {
+            if (item.title.toLowerCase().indexOf(filter) > -1) {
+                bar.classList.add('d-block')
+                bar.classList.remove('d-none')
+            } else {
+                bar.classList.add('d-none')
+            }
+            if (filter === '') {
+                bar.classList.add('d-none')
+            }
+        }
+    });
 });
 mangas.map(item => {
     const cards = document.createElement('div');
