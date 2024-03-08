@@ -80,6 +80,11 @@
     }
 }
 
+.scroll {
+    height: 40vh;
+    overflow-y: auto;
+}
+
 .search-input2 {
     outline: none;
     border: none;
@@ -95,13 +100,16 @@
 .position-absolute {
     top: 50px;
 }
-.position-search{
+
+.position-search {
     position: absolute;
     left: 60%;
 }
-.text{
+
+.text {
     font-size: 10px;
 }
+
 @media only screen and (max-width:990px) {
     .position-absolute {
         top: 90px;

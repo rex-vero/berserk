@@ -281,28 +281,22 @@ moon.addEventListener('click', () => {
     search.classList.remove("search-input2");
 });
 
-mangas.map(item => {
-    const cards = document.createElement('div');
-    cards.setAttribute('id', 'hi')
-    cards.classList.add('d-flex');
-    cards.classList.add('bg');
-    cards.innerHTML = `<a class="d-flex text-decoration-none" href="${item.link}">
-        <img src="${item.src}" class="img-fluid col-2">
-        <p class="align-self-center text-white ms-1">${item.title}</p>
-        </a>`;
-    bar.appendChild(cards);
-    search.addEventListener('input', () => {
-        filter = search.value.toLowerCase();
-        for (let i = 0; i < item.title.length; i++) {
-            if (item.title.toLowerCase().indexOf(filter) > -1) {
-                bar.classList.add('d-block')
-                bar.classList.remove('d-none')
-            } else {
-                bar.classList.add('d-none')
-            }
-            if (filter === '') {
-                bar.classList.add('d-none')
-            }
+search.addEventListener('input', () => {
+    bar.innerHTML = '';
+    mangas.map(item => {
+        const cards = document.createElement('div');
+        if (item.title.toLowerCase().includes(search.value.toLowerCase())) {
+            cards.classList.add('d-flex');
+            cards.classList.add('bg');
+            bar.classList.remove('d-none');
+            cards.innerHTML = `<a class="d-flex text-decoration-none" href="${item.link}">
+                <img src="${item.src}" class="img-fluid col-2">
+                <p class="align-self-center text-white ms-1">${item.title}</p>
+                </a>`;
+            bar.appendChild(cards);
+        }
+        if (search.value === '') {
+            bar.classList.add('d-none');
         }
     });
 });

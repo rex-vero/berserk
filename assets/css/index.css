@@ -347,6 +347,11 @@ body {
   color: rgba(189, 13, 0, 0.5568627451);
 }
 
+.scroll {
+  height: 40vh;
+  overflow-y: auto;
+}
+
 .search-input2 {
   outline: none;
   border: none;
